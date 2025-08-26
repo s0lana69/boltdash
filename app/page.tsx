@@ -111,8 +111,8 @@ export default function Dashboard() {
               { title: "Mobile Top-up", icon: "📱" },
               { title: "Electricity", icon: "💡" }
             ].map((item, i) => (
-              <Card key={i} className="bg-[#2a2a2a] border-[#3a3a3a] hover:bg-[#2a2a2a]/80 transition-colors cursor-pointer h-full">
-                <CardContent className="p-5 flex flex-col items-center justify-center h-full">
+              <Card key={i} className="bg-[#2a2a2a] border-[#3a3a3a] hover:bg-[#2a2a2a]/80 transition-colors cursor-pointer">
+                <CardContent className="p-5 flex flex-col items-center justify-center">
                   <div className="text-2xl mb-2">{item.icon}</div>
                   <div className="text-center font-medium">{item.title}</div>
                 </CardContent>
@@ -120,10 +120,10 @@ export default function Dashboard() {
             ))}
           </div>
 
-          {/* Main Content Grid - 2-column layout */}
-          <div className="grid grid-cols-3 gap-8">
+          {/* Main Content Grid - Fixed 2-column layout */}
+          <div className="flex gap-8">
             {/* Left Column - 60% width */}
-            <div className="col-span-2 space-y-8">
+            <div className="w-[60%] space-y-8">
               {/* Total Balance Chart */}
               <Card className="bg-[#2a2a2a] border-[#3a3a3a]">
                 <CardContent className="p-8">
@@ -175,7 +175,7 @@ export default function Dashboard() {
             </div>
 
             {/* Right Column - 40% width */}
-            <div className="col-span-1 space-y-8">
+            <div className="w-[40%] space-y-8">
               {/* Cards Section */}
               <Card className="bg-[#2a2a2a] border-[#3a3a3a]">
                 <CardContent className="p-8">
