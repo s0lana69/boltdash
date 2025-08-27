@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { BarChart, PieChart, VideoIcon, Settings, Users, Zap } from 'lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { BarChart, PieChart, Video, Zap, Users, Settings } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function Dashboard() {
@@ -11,7 +10,7 @@ export default function Dashboard() {
   const navigationItems = [
     { icon: BarChart, label: 'Dashboard', active: true },
     { icon: PieChart, label: 'Advanced Analytics', active: false },
-    { icon: VideoIcon, label: 'AI Content Studio', active: false },
+    { icon: Video, label: 'AI Content Studio', active: false },
     { icon: Zap, label: 'Viral Scanner', active: false },
     { icon: Users, label: 'AI Analyzer 2', active: false },
     { icon: Settings, label: 'Settings', active: false },
