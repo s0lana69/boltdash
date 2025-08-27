@@ -28,20 +28,20 @@ export default function Dashboard() {
                 <polygon 
                   points="24,4 40,14 40,34 24,44 8,34 8,14" 
                   fill="none" 
-                  stroke="rgba(169, 169, 169, 0.7)" 
+                  stroke="rgba(138, 43, 226, 0.7)" 
                   strokeWidth="2"
                 />
                 <polygon 
                   points="24,10 34,16 34,32 24,38 14,32 14,16" 
                   fill="none" 
-                  stroke="rgba(169, 169, 169, 0.7)" 
+                  stroke="rgba(138, 43, 226, 0.7)" 
                   strokeWidth="1.5"
                 />
-                <circle cx="24" cy="24" r="4" fill="rgba(169, 169, 169, 0.7)" />
+                <circle cx="24" cy="24" r="4" fill="rgba(138, 43, 226, 0.7)" />
               </svg>
             </div>
             <div>
-              <div className="text-gray-300 font-bold text-xl pulse-text">
+              <div className="text-purple-500 font-bold text-xl pulse-text">
                 TrueViral.ai
               </div>
               <div className="text-xs text-gray-500 uppercase tracking-wider">PLATFORM</div>
@@ -55,13 +55,13 @@ export default function Dashboard() {
               {navigationItems.map((item, index) => (
                 <div key={index} className={`flex items-center px-4 py-3 rounded-lg cursor-pointer transition-colors relative ${
                   item.active 
-                    ? 'bg-gray-700 text-white' 
-                    : 'text-gray-400 hover:bg-gray-700/50'
+                    ? 'bg-purple-600 text-white' 
+                    : 'text-gray-400 hover:bg-purple-600/20'
                 }`}>
                   <item.icon size={20} className="mr-3" />
                   <span className="text-sm font-medium">{item.label}</span>
                   {item.active && (
-                    <div className="absolute right-0 top-0 bottom-0 w-1 bg-gray-400 rounded-l-full"></div>
+                    <div className="absolute right-0 top-0 bottom-0 w-1 bg-purple-500 rounded-l-full"></div>
                   )}
                 </div>
               ))}
@@ -70,7 +70,7 @@ export default function Dashboard() {
 
           {/* Logout */}
           <div className="mt-auto">
-            <div className="flex items-center px-4 py-3 rounded-lg cursor-pointer transition-colors text-gray-400 hover:bg-gray-700/50">
+            <div className="flex items-center px-4 py-3 rounded-lg cursor-pointer transition-colors text-gray-400 hover:bg-purple-600/20">
               <Settings size={20} className="mr-3" />
               <span className="text-sm font-medium">Logout</span>
             </div>
@@ -121,7 +121,7 @@ export default function Dashboard() {
                 <h3 className="text-white text-lg font-medium mb-4">Performance Overview</h3>
                 <div className="relative h-48 bg-[#1a1a1a] rounded-lg p-4">
                   {/* Chart placeholder */}
-                  <div className="w-full h-full bg-gradient-to-r from-gray-700/20 to-gray-700/10 rounded-lg"></div>
+                  <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-purple-500/10 rounded-lg"></div>
                 </div>
               </CardContent>
             </Card>
@@ -151,7 +151,7 @@ export default function Dashboard() {
                 <h3 className="text-white text-lg font-medium mb-4">Performance Radar</h3>
                 <div className="relative h-48 bg-[#1a1a1a] rounded-lg p-4">
                   {/* Radar chart placeholder */}
-                  <div className="w-full h-full bg-gradient-to-r from-gray-700/20 to-gray-700/10 rounded-lg"></div>
+                  <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-purple-500/10 rounded-lg"></div>
                 </div>
               </CardContent>
             </Card>
