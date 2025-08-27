@@ -1,10 +1,8 @@
 "use client";
 
 import { useState } from 'react';
-import { Search, Bell, ChevronDown, BarChart, PieChart, VideoIcon, Settings, Users, Zap } from 'lucide-react';
+import { BarChart, PieChart, VideoIcon, Settings, Users, Zap } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function Dashboard() {
@@ -17,12 +15,6 @@ export default function Dashboard() {
     { icon: Zap, label: 'Viral Scanner', active: false },
     { icon: Users, label: 'AI Analyzer 2', active: false },
     { icon: Settings, label: 'Settings', active: false },
-  ];
-
-  const recentTransactions = [
-    { name: 'Ahsan Jilani', date: '24-Dec-2022 12:23:23 PM', amount: '- $ 190', color: 'bg-purple-500' },
-    { name: 'Furqan Ashiq', date: '24-Dec-2022 09:54:23 AM', amount: '+ $ 270', color: 'bg-purple-600' },
-    { name: 'Ahtishami', date: '02-Dec-2022 05:15:00 PM', amount: '- $ 150', color: 'bg-purple-700' },
   ];
 
   return (
@@ -86,37 +78,19 @@ export default function Dashboard() {
 
         {/* Main Content */}
         <div className="flex-1 p-6 overflow-hidden">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h1 className="text-2xl font-semibold text-white mb-1">Good Morning <span className="font-bold">Content Creator</span></h1>
-              <p className="text-gray-400 text-sm">Welcome to the dashboard</p>
-            </div>
-            
-            <div className="flex items-center space-x-6">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
-                <Input 
-                  placeholder="Search here" 
-                  className="pl-10 w-80 h-10 bg-[#1a1a2e] border-gray-600 text-white placeholder-gray-500 focus:border-purple-500 rounded-lg"
+          {/* YouTube Logo Header */}
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-16 h-16">
+              <svg viewBox="0 0 24 24" className="w-full h-full">
+                <path 
+                  fill="#FF0000" 
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
                 />
-              </div>
-              
-              <div className="relative">
-                <Bell className="text-gray-400 cursor-pointer" size={22} />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-purple-500 rounded-full flex items-center justify-center">
-                  <span className="text-[10px] text-white font-bold">1</span>
-                </div>
-              </div>
-              
-              <Avatar className="w-10 h-10">
-                <AvatarImage src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=150" alt="User" />
-                <AvatarFallback>CC</AvatarFallback>
-              </Avatar>
+              </svg>
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-6 h-[calc(100vh-280px)]">
+          <div className="grid grid-cols-3 gap-6 h-[calc(100vh-200px)]">
             {/* Top Performing Content */}
             <Card className="bg-[#1a1a2e] border-gray-700 col-span-2">
               <CardContent className="p-6">
