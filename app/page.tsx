@@ -42,7 +42,20 @@ export default function Dashboard() {
               </svg>
             </div>
             <div>
-              <div className="text-purple-500 font-bold text-xl">TrueViral.ai</div>
+              <div className="text-purple-500 font-bold text-xl animate-glow">
+                <span className="glow-text">T</span>
+                <span className="glow-text">r</span>
+                <span className="glow-text">u</span>
+                <span className="glow-text">e</span>
+                <span className="glow-text">V</span>
+                <span className="glow-text">i</span>
+                <span className="glow-text">r</span>
+                <span className="glow-text">a</span>
+                <span className="glow-text">l</span>
+                <span className="glow-text">.</span>
+                <span className="glow-text">a</span>
+                <span className="glow-text">i</span>
+              </div>
               <div className="text-xs text-gray-400 uppercase tracking-wider">PLATFORM</div>
             </div>
           </div>
@@ -79,8 +92,8 @@ export default function Dashboard() {
         {/* Main Content */}
         <div className="flex-1 p-6 overflow-hidden">
           {/* YouTube Logo Header */}
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-16 h-16">
+          <div className="flex items-center mb-6">
+            <div className="w-10 h-10">
               <svg viewBox="0 0 24 24" className="w-full h-full">
                 <path 
                   fill="#FF0000" 
