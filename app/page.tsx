@@ -17,10 +17,10 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="h-screen bg-[#0f0f1a] text-white overflow-hidden">
+    <div className="h-screen bg-[#1a1a1a] text-white overflow-hidden">
       <div className="flex h-full">
         {/* Sidebar */}
-        <div className="w-64 bg-[#1a1a2e] h-full p-6 flex flex-col">
+        <div className="w-64 bg-[#2d2d2d] h-full p-6 flex flex-col">
           {/* Logo */}
           <div className="flex items-center mb-8">
             <div className="w-12 h-12 mr-3">
@@ -28,40 +28,40 @@ export default function Dashboard() {
                 <polygon 
                   points="24,4 40,14 40,34 24,44 8,34 8,14" 
                   fill="none" 
-                  stroke="rgba(138, 43, 226, 0.5)" 
+                  stroke="rgba(169, 169, 169, 0.7)" 
                   strokeWidth="2"
                 />
                 <polygon 
                   points="24,10 34,16 34,32 24,38 14,32 14,16" 
                   fill="none" 
-                  stroke="rgba(138, 43, 226, 0.5)" 
+                  stroke="rgba(169, 169, 169, 0.7)" 
                   strokeWidth="1.5"
                 />
-                <circle cx="24" cy="24" r="4" fill="rgba(138, 43, 226, 0.5)" />
+                <circle cx="24" cy="24" r="4" fill="rgba(169, 169, 169, 0.7)" />
               </svg>
             </div>
             <div>
-              <div className="text-purple-500 font-bold text-xl pulse-text">
+              <div className="text-gray-300 font-bold text-xl pulse-text">
                 TrueViral.ai
               </div>
-              <div className="text-xs text-gray-400 uppercase tracking-wider">PLATFORM</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wider">PLATFORM</div>
             </div>
           </div>
 
           {/* Main Menu */}
           <div className="mb-6">
-            <h3 className="text-gray-400 text-sm font-medium mb-4 text-center">Main Menu</h3>
+            <h3 className="text-gray-500 text-sm font-medium mb-4 text-center">Main Menu</h3>
             <nav className="space-y-1">
               {navigationItems.map((item, index) => (
                 <div key={index} className={`flex items-center px-4 py-3 rounded-lg cursor-pointer transition-colors relative ${
                   item.active 
-                    ? 'bg-purple-500 text-white' 
-                    : 'text-gray-300 hover:bg-purple-500/20'
+                    ? 'bg-gray-700 text-white' 
+                    : 'text-gray-400 hover:bg-gray-700/50'
                 }`}>
                   <item.icon size={20} className="mr-3" />
                   <span className="text-sm font-medium">{item.label}</span>
                   {item.active && (
-                    <div className="absolute right-0 top-0 bottom-0 w-1 bg-purple-500 rounded-l-full"></div>
+                    <div className="absolute right-0 top-0 bottom-0 w-1 bg-gray-400 rounded-l-full"></div>
                   )}
                 </div>
               ))}
@@ -70,7 +70,7 @@ export default function Dashboard() {
 
           {/* Logout */}
           <div className="mt-auto">
-            <div className="flex items-center px-4 py-3 rounded-lg cursor-pointer transition-colors text-gray-300 hover:bg-purple-500/20">
+            <div className="flex items-center px-4 py-3 rounded-lg cursor-pointer transition-colors text-gray-400 hover:bg-gray-700/50">
               <Settings size={20} className="mr-3" />
               <span className="text-sm font-medium">Logout</span>
             </div>
@@ -93,7 +93,7 @@ export default function Dashboard() {
 
           <div className="grid grid-cols-3 gap-6 h-[calc(100vh-200px)]">
             {/* Top Performing Content */}
-            <Card className="bg-[#1a1a2e] border-gray-700 col-span-2">
+            <Card className="bg-[#2d2d2d] border-gray-700 col-span-2">
               <CardContent className="p-6">
                 <h3 className="text-white text-lg font-medium mb-4">Top Performing Content</h3>
                 <div className="space-y-3">
@@ -103,7 +103,7 @@ export default function Dashboard() {
                     { title: 'How Bollywood Changed Indian Fashion Forever', platform: 'YouTube', growth: '+0.4%' },
                     { title: 'Da Dogs Judge You? Watch That Pets #dogfails', platform: 'YouTube', growth: '+0.5%' }
                   ].map((content, index) => (
-                    <div key={index} className="flex items-center justify-between p-3 bg-[#0f0f1a] rounded-lg">
+                    <div key={index} className="flex items-center justify-between p-3 bg-[#1a1a1a] rounded-lg">
                       <div>
                         <div className="text-white text-sm">{content.title}</div>
                         <div className="text-gray-400 text-xs">{content.platform}</div>
@@ -116,18 +116,18 @@ export default function Dashboard() {
             </Card>
 
             {/* Performance Overview */}
-            <Card className="bg-[#1a1a2e] border-gray-700">
+            <Card className="bg-[#2d2d2d] border-gray-700">
               <CardContent className="p-6">
                 <h3 className="text-white text-lg font-medium mb-4">Performance Overview</h3>
-                <div className="relative h-48 bg-[#0f0f1a] rounded-lg p-4">
+                <div className="relative h-48 bg-[#1a1a1a] rounded-lg p-4">
                   {/* Chart placeholder */}
-                  <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-purple-500/10 rounded-lg"></div>
+                  <div className="w-full h-full bg-gradient-to-r from-gray-700/20 to-gray-700/10 rounded-lg"></div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Recent Comments */}
-            <Card className="bg-[#1a1a2e] border-gray-700">
+            <Card className="bg-[#2d2d2d] border-gray-700">
               <CardContent className="p-6">
                 <h3 className="text-white text-lg font-medium mb-4">Recent Comments</h3>
                 <div className="space-y-3">
@@ -135,7 +135,7 @@ export default function Dashboard() {
                     { name: '@lazady', comment: 'Nice one', time: '4 months ago' },
                     { name: '@WTFaktz', comment: 'Interesting take', time: '4 months ago' }
                   ].map((comment, index) => (
-                    <div key={index} className="p-3 bg-[#0f0f1a] rounded-lg">
+                    <div key={index} className="p-3 bg-[#1a1a1a] rounded-lg">
                       <div className="text-white text-sm">{comment.name}</div>
                       <div className="text-gray-400 text-xs">{comment.comment}</div>
                       <div className="text-gray-500 text-xs mt-1">{comment.time}</div>
@@ -146,12 +146,12 @@ export default function Dashboard() {
             </Card>
 
             {/* Performance Radar */}
-            <Card className="bg-[#1a1a2e] border-gray-700">
+            <Card className="bg-[#2d2d2d] border-gray-700">
               <CardContent className="p-6">
                 <h3 className="text-white text-lg font-medium mb-4">Performance Radar</h3>
-                <div className="relative h-48 bg-[#0f0f1a] rounded-lg p-4">
+                <div className="relative h-48 bg-[#1a1a1a] rounded-lg p-4">
                   {/* Radar chart placeholder */}
-                  <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-purple-500/10 rounded-lg"></div>
+                  <div className="w-full h-full bg-gradient-to-r from-gray-700/20 to-gray-700/10 rounded-lg"></div>
                 </div>
               </CardContent>
             </Card>
