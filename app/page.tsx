@@ -42,19 +42,8 @@ export default function Dashboard() {
               </svg>
             </div>
             <div>
-              <div className="text-purple-500 font-bold text-xl animate-pulse-text">
-                <span className="pulse-char">T</span>
-                <span className="pulse-char">r</span>
-                <span className="pulse-char">u</span>
-                <span className="pulse-char">e</span>
-                <span className="pulse-char">V</span>
-                <span className="pulse-char">i</span>
-                <span className="pulse-char">r</span>
-                <span className="pulse-char">a</span>
-                <span className="pulse-char">l</span>
-                <span className="pulse-char">.</span>
-                <span className="pulse-char">a</span>
-                <span className="pulse-char">i</span>
+              <div className="text-purple-500 font-bold text-xl pulse-text">
+                TrueViral.ai
               </div>
               <div className="text-xs text-gray-400 uppercase tracking-wider">PLATFORM</div>
             </div>
